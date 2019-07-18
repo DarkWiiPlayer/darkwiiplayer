@@ -166,3 +166,35 @@ Example:
 
 	local ages = { [20]="John, Henry"; [21]="William"; }
 	local errors = { [1]="File not Found"; [2]="Permission Denied" }
+
+# Errors
+
+1. On error, functions should return `nil` + error message
+2. Whenever possible, an identifier should be passed as the third argument
+
+Explanation:
+
+`nil` + message is a widely used convention for returning errors in Lua.
+However, error messages are not guaranteed to remain unchanged,
+this they are poorly suited to identify an error programatically.
+Thus it makes sense to pass a third value that can be used to identify an error
+condition. This can be a numeric error code, a string or a unique table.
+
+Example:
+
+	local function divide(dividend, divisor)
+		if divisor == 0 then
+			return nil, 'Attempting to divide by 0', 'division-by-0'
+		else
+			return dividend / divisor
+		end
+	end
+
+1. Libraries should never raise errors to the calling code.
+
+Explanation:
+
+Because error-handling mechanisms in Lua are very simple
+and there is no mechanism like 'rescue' blocks,
+errors are hard to deal with in section of code that require cleanup operations
+to keep state (be it internal or external) consistent.
