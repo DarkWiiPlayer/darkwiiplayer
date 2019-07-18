@@ -1,5 +1,78 @@
 <!-- vim: set noexpandtab :miv -->
 
+# Comments
+
+1. Put no space after `--` for commented out code
+2. Put one space after `--` for actual comments
+
+Example:
+
+	--print("foo")
+	print(bar) -- Prints a bar
+
+1. Use `-->` to signal output or return values
+
+Example:
+
+	print(2 * 2) --> 4
+	return h * w --> area
+
+1. Use [ldoc](syntax) to document functionality
+
+Example:
+
+	--- Foos a Bar
+	function foo(bar)
+
+1. Use `--` for comments that apply to the entire line
+2. Use `--[[]]` for comments that apply to single elements of a line
+
+Example:
+
+	local x, y -- coordinates
+	local h --[[height]], r --[[radius]]
+
+1. Use `--[[]]` comments to comment out items from a list
+2. Include separators in the comment (or not) according to the rules in the
+	 table / sequence section
+
+	print("Hello", "World"--[[, "foo", "bar"]])
+	local elements = { foo, --[[bar,]] }
+
+1. Prefer splitting lines to using several comments per line
+
+Example:
+
+	local r -- radius
+	local h -- height
+
+1. Always close multi-line comments with `--]]`
+
+Example:
+
+	--[[
+		this code
+		does stuff
+	--]]
+
+1. Always close inline ranged comments with `]]`
+
+Example:
+
+	local foo --[[Foo]], bar --[[Bar]]
+
+# Variables
+
+1. Use `do ... end` blocks to limit the scope of a local variables
+2. Put the `do` keyword on the same line as a related declaration
+
+Example:
+
+	local foo do
+		local bar = 2 + 2
+		foo = bar * 2
+	end
+
 # Tables
 
 ## Spacing
