@@ -9,7 +9,7 @@
 2. Or neither of them
 3. Put spaces *after* the separator (if at all), never before
 
-Examples:
+Example:
 
 	local outer = { {"inner",1}, {"inner",2}, }
 
@@ -18,7 +18,7 @@ Examples:
 2. Or don't put any items on the same line as the curly braces.
 3. Indent the items of the table
 
-Examples:
+Example:
 
 	local oneline = {'hello', 'world',}
 	lcoal multiline = {
@@ -32,7 +32,7 @@ Examples:
 1. Use commas (`,`) to separate order-dependant items (list)
 2. Use semicolons (`;`) to separate order-independant items (set)
 
-Examples:
+Example:
 
 	local ingredients = { "eggs"; "flour"; "milk"; }
 	local steps = { "mix", "fry", }
@@ -43,7 +43,7 @@ Examples:
 3. Put no separator after the last element if external conditions must change
 	 for an additional item to be inserted.
 
-Examples:
+Example:
 
 	local color = { 0xff, 0x20, 0x40 }
 	local line = { {0, 0}, {0, 20}, {20, 20}, }
@@ -56,7 +56,7 @@ Examples:
 	open-ended sequences
 3. Or use a different separator to signal that no items should be added
 
-Examples:
+Example:
 
 	local pancakes = {
 		'mix', 'fry';
@@ -78,7 +78,7 @@ Examples:
 2. Use semicolons otherwise
 3. Apply same rules as with sequnces for separator after last element
 
-Examples:
+Example:
 
 	local point = {x=20, y=30}
 	local tasks = { monday = {'call steve'}, tuesday = {'fix kitchen door'}, }
@@ -89,7 +89,7 @@ Examples:
 2. Use square brackets for numbers acting as keys in a map
 3. Judge based on semantic meaning, not on technicalities
 
-Examples:
+Example:
 
 	local ages = { [20]="John, Henry"; [21]="William"; }
 	local errors = { [1]="File not Found"; [2]="Permission Denied" }
