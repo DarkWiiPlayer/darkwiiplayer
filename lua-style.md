@@ -35,6 +35,8 @@ Example:
 1. Use `--[[]]` comments to comment out items from a list
 2. Include separators in the comment (or not) according to the rules in the
 	 table / sequence section
+	
+Example:
 
 	print("Hello", "World"--[[, "foo", "bar"]])
 	local elements = { foo, --[[bar,]] }
