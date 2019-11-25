@@ -33,4 +33,6 @@ Not much to say about this, everyone should have read SICP.
 
 > Most professional programmers that I’ve encountered are not well prepared to tackle algorithm design problems. This is a pity, because the techniques of algorithm design form one of the core practical technologies of computer science.
 
+## Papers
+
 ## Blogs
