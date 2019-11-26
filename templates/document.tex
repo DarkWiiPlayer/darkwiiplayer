@@ -1,7 +1,8 @@
 \documentclass{article}
 
 \usepackage{graphicx}
-\usepackage{cite}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{$HOME/me/bibliotheca.bib}
 
 \title{Programming is fun!}
 \author{DarkWiiPlayer}
@@ -18,6 +19,5 @@
 
 Programming is fun! \cite{sicp}
 
-\bibliography{$HOME/me/bibliotheca.bib}
-\bibliographystyle{apalike}
+\printbibliography
 \end{document}
