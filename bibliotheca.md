@@ -25,14 +25,6 @@ Stephen Boyd and Lieven Vandenberghe
 
 > Here is just one tip of the iceberg we’ll explore in this book: How much time does it take to find the prime factors of a 1,000-digit integer?
 
-### [Structure and Interpretation of Computer Programs](https://sarabander.github.io/sicp/)
-
-Not much to say about this, everyone should have read SICP.
-
-### [The Algorithm Design Manual](http://mimoza.marmara.edu.tr/~msakalli/cse706_12/SkienaTheAlgorithmDesignManual.pdf)
-
-> Most professional programmers that I’ve encountered are not well prepared to tackle algorithm design problems. This is a pity, because the techniques of algorithm design form one of the core practical technologies of computer science.
-
 ### [Reverse Engineering for Beginners](https://beginners.re/)
 
 > There are several popular meanings of the term “reverse engineering”:
@@ -42,6 +34,14 @@ Not much to say about this, everyone should have read SICP.
 > 3. Recreating DBMS8 structure
 > 
 > This book is about the first meaning
+
+### [Structure and Interpretation of Computer Programs](https://sarabander.github.io/sicp/)
+
+Not much to say about this, everyone should have read SICP.
+
+### [The Algorithm Design Manual](http://mimoza.marmara.edu.tr/~msakalli/cse706_12/SkienaTheAlgorithmDesignManual.pdf)
+
+> Most professional programmers that I’ve encountered are not well prepared to tackle algorithm design problems. This is a pity, because the techniques of algorithm design form one of the core practical technologies of computer science.
 
 ## Papers
 
