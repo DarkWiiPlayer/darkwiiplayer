@@ -1,14 +1,40 @@
 \documentclass{article}
 
+\usepackage{listings}
+\usepackage{color}
 \usepackage{graphicx}
 \usepackage[backend=biber,style=alphabetic]{biblatex}
 \addbibresource{$HOME/me/bibliotheca.bib}
 
+\def\code#1{\texttt{#1}}
+
 \title{Programming is fun!}
 \author{DarkWiiPlayer}
 
+\definecolor{listingbg}{rgb}{1,0.96,0.7}
+
 \begin{document}
+\lstset{
+	backgroundcolor=\color{listingbg},
+	tabsize=3, numbers=left,
+}
+
 \maketitle
+
+Listings can be done fairly easily in LaTeX; one only has to include the \code{listings} package and start a new \code{lstlisting} block.
+
+\lstset{language=[5.1]Lua,caption={A hello world program in Lua}}
+\begin{lstlisting}
+-- Comment
+print "Hello World!"
+\end{lstlisting}
+
+\lstset{language=C,caption={The same program in C}}
+\begin{lstlisting}
+#include <stdio.h>
+// Comment
+int main() { printf("Hello World!\n") }
+\end{lstlisting}
 
 \begin{figure}[h]
 	\centering
