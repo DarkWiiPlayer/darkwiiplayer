@@ -36,9 +36,11 @@ Not much to say about this, everyone should have read SICP.
 ### [Reverse Engineering for Beginners](https://beginners.re/)
 
 > There are several popular meanings of the term “reverse engineering”:
+> 
 > 1. The reverse engineering of software; researching compiled programs
 > 2. The scanning of 3D structures and the subsequent digital manipulation required in order to duplicate them
 > 3. Recreating DBMS8 structure
+> 
 > This book is about the first meaning
 
 ## Papers
