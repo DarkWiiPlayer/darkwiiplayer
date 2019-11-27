@@ -1,4 +1,4 @@
-# Books, Blogs and Otters
+# Books, Blogs and Others
 
 This is a list of resources I've found on the internet that seemed somewhat
 interesting.
