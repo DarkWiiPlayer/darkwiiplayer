@@ -1,0 +1,77 @@
+.\" A brief introduction to manpages in groff
+
+.TH manpage 5 "" ""  "How to write a manpage"
+.\" Name
+.\" Number
+.\" Footer Center
+.\" Left Footer
+.\" Center Header
+
+.SH Groff
+.\" #####
+
+Macros start either with \fB.\fR at the beginning of a line, or with \fB\\f\fR anywhere else.
+
+.SH Headers
+.\" #######
+
+Start documents with a \.TH macro, followed by at least five parameters:
+.br
+- Name of the manpage
+.br
+- Section number
+.br
+- Center footer
+.br
+- Left footer
+.br
+- Center header
+
+The
+.B \.SH
+macro adds a section header
+
+.SH Sections
+.\" ########
+
+.B Section 1\fR: Executable programs or shell commands
+.br
+.B Section 2\fR: System calls
+.br
+.B Section 3\fR: sLibrary calls
+.br
+.B Section 4\fR: Special files (usually in \fI/dev\fR)
+.br
+.B Section 5\fR: File formats and conventions (eg. \fI/etc/passwd\fR)
+.br
+.B Section 6\fR: Games
+.br
+.B Section 7\fR: Miscellaneous (including macro packages and conventions)
+.br
+.B Section 8\fR: System administration commands (usually for root)
+.br
+.B Section n\fR: Kernel routines
+
+.SH Paragraphing
+.\" ############
+
+.B \.PP
+Starts a new paragraph.
+.br
+A normal line-break can be achieved with
+.B \.BR
+
+\fB\.RS\fR and \fB\.RE\fR indent a paragraph.
+
+You can center the following line with the
+.B \.CR
+macro
+
+.SH Font Attributes
+.\" ###############
+
+.B \.I
+makes text italic
+(Note that italic may be represented as underlined instead)
+
+.B \.B makes it bold
