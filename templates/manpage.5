@@ -1,5 +1,4 @@
 .\" A brief introduction to manpages in groff
-
 .TH manpage 5 "" ""  "How to write a manpage"
 .\" Name
 .\" Number
@@ -12,11 +11,37 @@
 
 Macros start either with \fB.\fR at the beginning of a line, or with \fB\\f\fR anywhere else.
 
+.SH Common Structure
+.\" ################
+
+Manpages for programs \fI(1)\fR usually have the following sections:
+
+\fBNAME\fR:
+The name of the programfollowed by a short (oneliner) description
+.br
+\fBSYNOPSIS\fR:
+The syntax used to run the program from the command line
+.br
+\fBDESCRIPTION\fR:
+A detailed description of what the program does
+.br
+\fBOPTIONS\fR:
+A listing of the options, as listed in the \fBSYNOPSIS\fR section
+.br
+\fBBUGS\fR: 
+Any known bugs the program has
+.br
+\fBAUTHOR\fR:
+The name and email address of the author
+.br
+\fBSEE ALSO\fR:
+A list of related programs (name and section number)
+
 .SH Headers
 .\" #######
 
-Start documents with a \.TH macro, followed by at least five parameters:
-.br
+Start documents with a \fB\.TH\fR macro, followed by at least five parameters:
+
 - Name of the manpage
 .br
 - Section number
@@ -75,3 +100,15 @@ makes text italic
 (Note that italic may be represented as underlined instead)
 
 .B \.B makes it bold
+
+.SH File Locations
+.\" ##############
+
+The location of your manpages should be within your manpath
+(man man-pages.7 for more information)
+within subdirectories called \fBman1\fR, \fBman2\fR, etc.
+where the number is the section number of the manpage.
+
+After that, run \fBmandb\fR to find the new file
+and add it to the database
+for faster future access on slow systems
