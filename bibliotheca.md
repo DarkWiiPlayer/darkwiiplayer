@@ -1,4 +1,5 @@
-# Books, Blogs and Others
+Books, Blogs and Others
+================================================================================
 
 This is a list of resources I've found on the internet that seemed somewhat
 interesting.
@@ -8,7 +9,8 @@ This is not a list of stuff I've read;
 most likely, it's things that I want to read at some point
 or just wanted to save in case I ever need them.
 
-## Books
+Books
+----------------------------------------
 
 ### [97 Things Every Programmer Should Know](https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/index.html)
 
@@ -43,14 +45,21 @@ Not much to say about this, everyone should have read SICP.
 
 > Most professional programmers that I’ve encountered are not well prepared to tackle algorithm design problems. This is a pity, because the techniques of algorithm design form one of the core practical technologies of computer science.
 
-## Papers
+Papers
+----------------------------------------
 
 ### [Memory Cache and Lisp](https://people.eecs.berkeley.edu/~fateman/papers/cachelisp.pdf)
 
 > Here we concentrate on automatic rearrangement of data, and examine the belief, common in some technical circles, that modern generational copying garbage collectors (GC) will improve data caching by relocating and compressing data, as a matter of normal processing.
 
-## Blogs
+### [T-Collide](https://www.cs.ucf.edu/~jmesit/publications/T-Collide%20CGAIDE%202004.pdf)
 
-## Others
+> This paper presents T-Collide, a fast, low memoryoverhead, low execution-cost, time-based collision detection scheme. It is intended for real-time systems such as games or simulations to optimize collision detection between large numbers of mobile objects. 
+
+Blogs
+----------------------------------------
+
+Others
+----------------------------------------
 
 ### [How These Things Work](https://reasonablypolymorphic.com/book/preface)
