@@ -3,7 +3,7 @@ Books, Blogs and Others
 
 This is a list of resources I've found on the internet that seemed somewhat
 interesting.
-That includes (mostly) books, but also blog posts, papers, etc.
+That includes books, blog posts, papers, etc.
 Link may not be canonical.
 This is not a list of stuff I've read;
 most likely, it's things that I want to read at some point
@@ -55,6 +55,10 @@ Papers
 ### [T-Collide](https://www.cs.ucf.edu/~jmesit/publications/T-Collide%20CGAIDE%202004.pdf)
 
 > This paper presents T-Collide, a fast, low memoryoverhead, low execution-cost, time-based collision detection scheme. It is intended for real-time systems such as games or simulations to optimize collision detection between large numbers of mobile objects. 
+
+### [Exceptional Continuations in JavaScript](http://www.schemeworkshop.org/2007/procPaper4.pdf)
+
+> In this paper we present our adaption of exception-based continuations to JavaScript.
 
 Blogs
 ----------------------------------------
