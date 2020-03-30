@@ -63,6 +63,8 @@ Papers
 Blogs
 ----------------------------------------
 
+### [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) (31 Aug 2014)
+
 Others
 ----------------------------------------
 
