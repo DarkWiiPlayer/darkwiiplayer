@@ -65,6 +65,8 @@ Blogs
 
 ### [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) (31 Aug 2014)
 
+### [Capability Myths Demolished](http://www.erights.org/elib/capability/duals/myths.html)
+
 Others
 ----------------------------------------
 
