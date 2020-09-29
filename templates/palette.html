@@ -1,0 +1,219 @@
+<h1>A colour palette in plain HTML</h1>
+
+<section class="box">
+	A template colour palette written as a self-contained HTML file.
+	New palettes can be created easily by copying the file and changing a few CSS variables.
+</section>
+
+<!-- TODO: Change the base hue and offset here -->
+<section style="--base-hue: 200deg; --saturation: 80%; --offset: calc(360deg / 3)">
+	<h2>Primary</h2>
+	<!-- Only override values here for slight tweaking -->
+	<div class="colors" style="--hue: var(--base-hue);">
+		<span style="--lightness: 10%"></span>
+		<span style="--lightness: 20%"></span>
+		<span style="--lightness: 30%"></span>
+		<span style="--lightness: 40%"></span>
+		<span style="--lightness: 50%"></span>
+		<span style="--lightness: 60%"></span>
+		<span style="--lightness: 70%"></span>
+		<span style="--lightness: 80%"></span>
+		<span style="--lightness: 90%"></span>
+	</div>
+
+	<section class="info box">
+		<b>Hint:</b>
+		Modify as needed by changing the <code>--hue</code> attribute in the inlined CSS.<br>
+		Usage of a separate color picker tool for this step might be preferable.<br>
+	</section>
+
+	<h2>Secondary</h2>
+	<div class="colors" style="--hue: calc(var(--base-hue) + var(--offset));">
+		<span style="--lightness: 10%"></span>
+		<span style="--lightness: 20%"></span>
+		<span style="--lightness: 30%"></span>
+		<span style="--lightness: 40%"></span>
+		<span style="--lightness: 50%"></span>
+		<span style="--lightness: 60%"></span>
+		<span style="--lightness: 70%"></span>
+		<span style="--lightness: 80%"></span>
+		<span style="--lightness: 90%"></span>
+	</div>
+
+	<section class="info box">
+		<b>Hint:</b>
+		You can copy any colour to the clipboard by just clicking on its box.
+		By default colours are copied as HSLA values.
+		This can be changed in the script block at the bottom of the document.
+	</section>
+
+	<h2>Secondary</h2>
+	<div class="colors" style="--hue: calc(var(--base-hue) - var(--offset));">
+		<span style="--lightness: 10%"></span>
+		<span style="--lightness: 20%"></span>
+		<span style="--lightness: 30%"></span>
+		<span style="--lightness: 40%"></span>
+		<span style="--lightness: 50%"></span>
+		<span style="--lightness: 60%"></span>
+		<span style="--lightness: 70%"></span>
+		<span style="--lightness: 80%"></span>
+		<span style="--lightness: 90%"></span>
+	</div>
+
+	<section class="info box">
+		<b>Hint:</b>
+		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
+		This makes it easier and quicker to make adjustments.
+	</section>
+</section>
+
+
+
+
+<!-- ======================================== -->
+<!-- ===== STYLES AND APPLICATION LOGIC ===== -->
+<!-- ======================================== -->
+
+<style>
+:root {
+	font-size: 1em;
+	color: hsl(220deg, 8%, 20%);
+	color: hsl(220deg, 8%, 20%);
+	font-family: "Open Sans", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+  code {
+	  font-family: "Hack", monospace;
+  }
+
+  body {
+	  display: flex;
+	  flex-flow: column nowrap;
+	  align-items: center;
+	  background: white;
+  }
+  /* The following only does font size shenanigans! */
+
+  h1, h2 {
+	  text-align: center;
+	  font-weight: normal;
+	  font-family: "Raleway", "Quicksand", serif;
+  }
+
+  h1 {
+	  font-size: 2.4em;
+	  --border: dotted .08em currentcolor;
+	  border-bottom: var(--border);
+	  border-top: var(---border);
+	  width: calc((3rem + .6rem * 2) * 9);
+	  text-align: center;
+	  padding: .2em 0;
+  }
+  h2 {
+	  font-size: 2em;
+  }
+
+  .box {
+	  --radius: .3em;
+	  width: calc((3rem + .6rem * 2) * 9);
+	  font-style: italic;
+	  border-radius: var(--radius);
+	  background-color: hsl(220deg, 14%, 96%);
+	  box-shadow: .0em .1em .2em inset hsl(220deg, 8%, 80%);
+	  padding: 1em 2em;
+
+	  position: relative;
+	  margin: 2em 0em;
+  }
+
+  .info, .success, .accept { --color: rgb(102, 204, 51); }
+  .warning, .acknowledge { --color: rgb(230, 182, 25); }
+  .error, .cancel { --color: rgb(204, 51, 77); }
+
+  .box::before {
+	  display: block;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  height: 100%;
+	  width: .4em;
+	  background-color: var(--color, transparent);
+	  border-radius: var(--radius) 0 0 var(--radius);
+	  content: '';
+  }
+
+
+  div.colors {
+	  --separation2: .6em; /* Halved separation */
+	  display: flex;
+	  /* padding: var(--separation2); */
+  }
+
+  div.colors span {
+	  background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
+	  border-radius: .4em;
+	  width: 3em;
+	  height: 3em;
+	  margin: var(--separation2);
+	  box-shadow: .1em .1em .8em hsla(calc(var(--hue) + 30deg), calc(100% - var(--lightness) - 10%), calc(var(--lightness) - 40%), .4) inset;
+  }
+
+  @keyframes fade {
+	  0%   { opacity: 0; transform: translate(-50%, -10%)}
+	  20%  { opacity: 1;}
+	  50%  { opacity: 1;}
+	  100% { opacity: 0; transform: translate(-50%, -150%)}
+  }
+
+  div.notification {
+	  top: 0em;
+	  border: 1px solid currentcolor;
+	  background: hsla(0deg, 0%, 100%, .8);
+	  font-size: 1em;
+	  opacity: 0;
+	  position: fixed;
+	  padding: .4em; 1em;
+	  font-weight: bold;
+	  text-align: center;
+  }
+
+  [center] { text-align: center; }
+</style>
+
+<script>
+	const show_message = function(message, color, x, y) {
+			let box = document.createElement('div');
+			box.innerHTML = message;
+			box.classList.add('notification');
+
+			if (x) box.style.left = x+"px";
+			if (y) box.style.top = y+"px";
+
+			document.querySelector("body").appendChild(box);
+
+			box.style.setProperty('animation', 'fade 1s');
+			box.style.setProperty('animation-fill-mode', 'forwards');
+			box.style.setProperty('color', color);
+
+			box.addEventListener("animationend", ({box: target}) => box.parentElement.removeChild(box))
+		}
+
+	window.addEventListener("load", function() {
+			document.querySelectorAll('div.colors span').forEach(function(span) {
+					span.addEventListener('click', function(event) {
+							let prop = name => getComputedStyle(event.target).getPropertyValue(name)
+							let hsla = `hsla(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")}, 1)`
+							navigator.clipboard.writeText(hsla).then(function() {
+									show_message(`Copied to Clipboard:<br>${hsla}`, hsla, event.clientX, event.clientY);
+								}, function(err) {
+										console.error('Async: Could not copy text: ', err);
+									});
+						});
+					span.style.setProperty('cursor', 'pointer');
+				});
+		})
+</script>
