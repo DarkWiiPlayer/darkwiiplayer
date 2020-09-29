@@ -205,7 +205,7 @@
 	window.addEventListener("load", function() {
 			document.querySelectorAll('div.colors span').forEach(function(span) {
 					span.addEventListener('click', function(event) {
-							let prop = name => getComputedStyle(event.target).getPropertyValue(name)
+							let prop = name => getComputedStyle(event.target).getPropertyValue(name).replace(/^ *| *$/g, "")
 							let hsla = `hsla(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")}, 1)`
 							navigator.clipboard.writeText(hsla).then(function() {
 									show_message(`Copied to Clipboard:<br>${hsla}`, hsla, event.clientX, event.clientY);
