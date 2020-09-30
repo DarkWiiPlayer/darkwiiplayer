@@ -10,58 +10,73 @@
 	<h2>Primary</h2>
 	<!-- Only override values here for slight tweaking -->
 	<div class="colors" style="--hue: var(--base-hue);">
-		<span style="--lightness: 10%"></span>
-		<span style="--lightness: 20%"></span>
-		<span style="--lightness: 30%"></span>
-		<span style="--lightness: 40%"></span>
-		<span style="--lightness: 50%"></span>
-		<span style="--lightness: 60%"></span>
-		<span style="--lightness: 70%"></span>
-		<span style="--lightness: 80%"></span>
-		<span style="--lightness: 90%"></span>
+    <span style="--lightness: 05%"></span>
+    <span style="--lightness: 15%"></span>
+    <span style="--lightness: 30%"></span>
+    <span style="--lightness: 40%"></span>
+    <span style="--lightness: 50%"></span>
+    <span style="--lightness: 60%"></span>
+    <span style="--lightness: 70%"></span>
+    <span style="--lightness: 80%"></span>
+    <span style="--lightness: 95%"></span>
 	</div>
 
-	<section class="info box">
-		<b>Hint:</b>
+	<section class="hint box">
 		Modify as needed by changing the <code>--hue</code> attribute in the inlined CSS.<br>
 		Usage of a separate color picker tool for this step might be preferable.<br>
 	</section>
 
 	<h2>Secondary</h2>
 	<div class="colors" style="--hue: calc(var(--base-hue) + var(--offset));">
-		<span style="--lightness: 10%"></span>
-		<span style="--lightness: 20%"></span>
-		<span style="--lightness: 30%"></span>
-		<span style="--lightness: 40%"></span>
-		<span style="--lightness: 50%"></span>
-		<span style="--lightness: 60%"></span>
-		<span style="--lightness: 70%"></span>
-		<span style="--lightness: 80%"></span>
-		<span style="--lightness: 90%"></span>
+    <span style="--lightness: 05%"></span>
+    <span style="--lightness: 15%"></span>
+    <span style="--lightness: 30%"></span>
+    <span style="--lightness: 40%"></span>
+    <span style="--lightness: 50%"></span>
+    <span style="--lightness: 60%"></span>
+    <span style="--lightness: 70%"></span>
+    <span style="--lightness: 80%"></span>
+    <span style="--lightness: 95%"></span>
 	</div>
 
-	<section class="info box">
-		<b>Hint:</b>
+	<section class="hint box">
 		You can copy any colour to the clipboard by just clicking on its box.
 		By default colours are copied as HSLA values.
 		This can be changed in the script block at the bottom of the document.
 	</section>
 
-	<h2>Secondary</h2>
+	<h2>Tertiary</h2>
 	<div class="colors" style="--hue: calc(var(--base-hue) - var(--offset));">
-		<span style="--lightness: 10%"></span>
-		<span style="--lightness: 20%"></span>
-		<span style="--lightness: 30%"></span>
-		<span style="--lightness: 40%"></span>
-		<span style="--lightness: 50%"></span>
-		<span style="--lightness: 60%"></span>
-		<span style="--lightness: 70%"></span>
-		<span style="--lightness: 80%"></span>
-		<span style="--lightness: 90%"></span>
+    <span style="--lightness: 05%"></span>
+    <span style="--lightness: 15%"></span>
+    <span style="--lightness: 30%"></span>
+    <span style="--lightness: 40%"></span>
+    <span style="--lightness: 50%"></span>
+    <span style="--lightness: 60%"></span>
+    <span style="--lightness: 70%"></span>
+    <span style="--lightness: 80%"></span>
+    <span style="--lightness: 95%"></span>
 	</div>
 
-	<section class="info box">
-		<b>Hint:</b>
+	<section class="hint box">
+		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
+		This makes it easier and quicker to make adjustments.
+	</section>
+
+	<h2>Neutral</h2>
+	<div class="colors" style="--hue: var(--base-hue); --saturation: 5%;">
+    <span style="--lightness: 05%"></span>
+    <span style="--lightness: 15%"></span>
+    <span style="--lightness: 30%"></span>
+    <span style="--lightness: 40%"></span>
+    <span style="--lightness: 50%"></span>
+    <span style="--lightness: 60%"></span>
+    <span style="--lightness: 70%"></span>
+    <span style="--lightness: 80%"></span>
+    <span style="--lightness: 95%"></span>
+	</div>
+
+	<section class="hint box">
 		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
 		This makes it easier and quicker to make adjustments.
 	</section>
@@ -75,16 +90,15 @@
 <!-- ======================================== -->
 
 <style>
-:root {
-	font-size: 1em;
-	color: hsl(220deg, 8%, 20%);
-	color: hsl(220deg, 8%, 20%);
-	font-family: "Open Sans", sans-serif;
-}
+  :root {
+    font-size: 1em;
+    color: hsl(220deg, 8%, 20%);
+    font-family: "Open Sans", sans-serif;
+  }
 
-* {
-	box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
   code {
 	  font-family: "Hack", monospace;
@@ -94,7 +108,7 @@
 	  display: flex;
 	  flex-flow: column nowrap;
 	  align-items: center;
-	  background: white;
+    background: hsl(200deg, 5%, 95%);
   }
   /* The following only does font size shenanigans! */
 
@@ -122,7 +136,7 @@
 	  width: calc((3rem + .6rem * 2) * 9);
 	  font-style: italic;
 	  border-radius: var(--radius);
-	  background-color: hsl(220deg, 14%, 96%);
+	  background: hsla(200deg, 5%, 92%, 1);
 	  box-shadow: .0em .1em .2em inset hsl(220deg, 8%, 80%);
 	  padding: 1em 2em;
 
@@ -130,11 +144,9 @@
 	  margin: 2em 0em;
   }
 
-  .info, .success, .accept { --color: rgb(102, 204, 51); }
-  .warning, .acknowledge { --color: rgb(230, 182, 25); }
-  .error, .cancel { --color: rgb(204, 51, 77); }
+  .hint, .info { --color: hsla(calc( 200deg -  calc(360deg / 3)), 80%, 50%, 1) }
 
-  .box::before {
+  .box::after {
 	  display: block;
 	  position: absolute;
 	  left: 0;
@@ -144,6 +156,12 @@
 	  background-color: var(--color, transparent);
 	  border-radius: var(--radius) 0 0 var(--radius);
 	  content: '';
+  }
+
+  .box.hint::before {
+    content: "Hint: ";
+    display: inline-block;
+    font-weight: bold;
   }
 
 
