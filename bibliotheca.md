@@ -60,6 +60,12 @@ Papers
 
 > In this paper we present our adaption of exception-based continuations to JavaScript.
 
+### [Recursive Restartability: Turning the Reboot Sledgehammer into a Scalpel](http://roc.cs.berkeley.edu/papers/recursive_restartability.pdf)
+
+> Even after decades of software engineering research, complex computer systems
+> still fail, primarily due to nondeterministic bugs that are typically resolved
+> by rebootin...
+
 Blogs
 ----------------------------------------
 
