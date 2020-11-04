@@ -48,6 +48,13 @@ Not much to say about this, everyone should have read SICP.
 Papers
 ----------------------------------------
 
+### [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
+
+> Researchers spend a great deal of time reading research papers. However, this
+> skill is rarely taught, leading to much wasted effort. This article outlines a
+> practical and efficient three-pass method for reading research papers. I also
+> describe how to use this method to do a literature survey.
+
 ### [Memory Cache and Lisp](https://people.eecs.berkeley.edu/~fateman/papers/cachelisp.pdf)
 
 > Here we concentrate on automatic rearrangement of data, and examine the belief, common in some technical circles, that modern generational copying garbage collectors (GC) will improve data caching by relocating and compressing data, as a matter of normal processing.
