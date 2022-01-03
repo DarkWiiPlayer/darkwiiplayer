@@ -1,4 +1,4 @@
 ---
-tags: library linking
+tags: library linking binary
 ---
 Lists symbols in object files
