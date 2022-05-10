@@ -21,6 +21,11 @@ Lua library for the server-side of your web projects.
 The current project structure is a bit of a clusterfuck but it is slowly being
 refactored into something decent.
 
+### [DarkWiiPlayer/JS](https://github.com/darkwiiplayer/js)
+
+A repository of JavaScript snippets slowly turned into a front-end
+micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
+
 ## Talk to me about:
 
 - Programming
