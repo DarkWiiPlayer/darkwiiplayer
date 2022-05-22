@@ -1,4 +1,8 @@
+---
+tags: markdown writing minimalism
+---
 # Apostrophe
+[Website](https://apps.gnome.org/en-GB/app/org.gnome.gitlab.somas.Apostrophe/) [Flathub](https://flathub.org/apps/details/org.gnome.gitlab.somas.Apostrophe)
 > Focus on your writing with a clean, distraction-free markdown editor.
 
 -   An UI tailored to comfortable writing

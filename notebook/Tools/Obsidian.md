@@ -1,7 +1,7 @@
 ---
-tags: productivity notes writing
+tags: markdown productivity notes writing
 ---
 
 # Obsidian
-[Obsidian](https://obsidian.md) is a powerful **knowledge base** on top of  
-a **local folder** of plain text Markdown files.
+[Website](https://obsidian.md)
+> A powerful **knowledge base** on top of a **local folder** of plain text Markdown files.

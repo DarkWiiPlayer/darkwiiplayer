@@ -1,4 +1,8 @@
+---
+tags: bibliography, latex
+---
 # Badabib
+[Github](https://github.com/RogerCrocker/BadaBib/) [Flathub](https://www.flathub.org/apps/details/com.github.rogercrocker.badabib)
 > A basic BibTeX viewer and editor written in Python and GTK, using python-bibtexparser under the hood.
 
 -   View, edit, sort, filter, and search BibTeX databases
