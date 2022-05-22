@@ -15,3 +15,10 @@ tags: markdown writing minimalism
 ```sh
 flatpak install flathub org.gnome.gitlab.somas.Apostrophe
 ```
+
+---
+
+- Very nice and simplistic UI that doesn't get in your way
+- Full-Screen combined with focus mode is great
+- Live-Preview can go in another window; perfect for multi-monitor setups
+- Dark theme <3
