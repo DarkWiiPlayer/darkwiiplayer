@@ -15,6 +15,16 @@ Weakness: Finishing projects 😖
 
 [![DarkWiiPlayer's GitHub stats](https://github-readme-stats.vercel.app/api?username=darkwiiplayer)](https://github.com/DarkWiiPlayer?tab=repositories)
 
+-----
+
+This repo is not just for the front-page.
+I also keep a bunch of stuff here that may or may not be of interest to other
+people like a short list of worthwile books, papers and blog posts;
+a few file templates, etc.
+
+Be sure to have a look at the [tools](https://github.com/DarkWiiPlayer/darkwiiplayer/tree/master/notebook/Tools) section in my public notebook; it's
+where I keep notes on the useful programs I find all over the internet 😀
+
 ## Projects
 
 ### [Restia](https://github.com/darkwiiplayer/restia)
@@ -52,12 +62,5 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 - [My website](https://darkwiiplayer.com) (whenever I get that updated)
 - The [Lua Scripters](https://discord.gg/7wu7ZsW) discord server
 - [Dev.to](https://dev.to/darkwiiplayer)
-
------
-
-This repo is not just for the front-page.
-I also keep a bunch of stuff here that may or may not be of interest to other
-people like a short list of worthwile books, papers and blog posts;
-a few file templates, etc.
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=darkwiiplayer)](https://github.com/DarkWiiPlayer?tab=repositories)
