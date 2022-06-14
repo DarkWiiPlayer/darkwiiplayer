@@ -43,6 +43,7 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 ### Just a bunch of smaller Lua libraries
 
 - [`arrr`](https://github.com/DarkWiiPlayer/arrr) for commandline argument parsing
+- [`based`](https://github.com/DarkWiiPlayer/based) for base16/32/64 encoding and decoding
 - [`lumber`](https://github.com/DarkWiiPlayer/lumber) for logging
 - [`scaffold`](https://github.com/DarkWiiPlayer/scaffold) for filesystem scaffolding
 - [`shapeshift`](https://github.com/DarkWiiPlayer/shapeshift) for data validations and transformations
