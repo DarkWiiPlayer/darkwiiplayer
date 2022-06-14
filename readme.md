@@ -8,7 +8,7 @@
 >
 > — [Pete Goodliffe](https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_39/)
 
-## About
+## About 🦈🥚
 
 Strength: Starting projects 😁
 
