@@ -29,6 +29,15 @@ refactored into something decent.
 A repository of JavaScript snippets slowly turned into a front-end
 micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 
+### Just a bunch of smaller Lua libraries
+
+- [`arrr`](https://github.com/DarkWiiPlayer/arrr) for commandline argument parsing
+- [`shapeshift`](https://github.com/DarkWiiPlayer/shapeshift) for data validations and transformations
+- [`lumber`](https://github.com/DarkWiiPlayer/lumber) for logging
+- [`scaffold`](https://github.com/DarkWiiPlayer/scaffold) for filesystem scaffolding
+- [`skooma`](https://github.com/DarkWiiPlayer/skooma) for HTML generation (also ported to JS)
+- [`streamcsv`](https://github.com/DarkWiiPlayer/streamcsv) for performant CSV reading
+
 ## Talk to me about:
 
 - Programming
