@@ -4,6 +4,9 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-oxygen.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
 
+> [*Improve code by removing it*](https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_39/)
+> — Pete Goodliffe
+
 ## About
 
 Strength: Starting projects 😁
