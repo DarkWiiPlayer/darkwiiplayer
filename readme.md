@@ -50,19 +50,19 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 - [`skooma`](https://github.com/DarkWiiPlayer/skooma) for HTML generation (also ported to JS)
 - [`streamcsv`](https://github.com/DarkWiiPlayer/streamcsv) for performant CSV reading
 
+
+## Find me on:
+
+- The [Lua Scripters](https://discord.gg/7wu7ZsW) discord server
+- [Fosstodon](https://fosstodon.org/@darkwiiplayer)
+- [Twitter](https://twitter.com/DarkWiiPlayer)
+- [Dev.to](https://dev.to/darkwiiplayer)
+
 ## Talk to me about:
 
 - Programming
 - Games
 - Anime
 - Anything nerdy, really
-
-## Find me on:
-
-- [Twitter](https://twitter.com/DarkWiiPlayer)
-- [Fosstodon](https://fosstodon.org/@darkwiiplayer)
-- [My website](https://darkwiiplayer.com) (whenever I get that updated)
-- The [Lua Scripters](https://discord.gg/7wu7ZsW) discord server
-- [Dev.to](https://dev.to/darkwiiplayer)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=darkwiiplayer)](https://github.com/DarkWiiPlayer?tab=repositories)
