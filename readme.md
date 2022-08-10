@@ -44,6 +44,7 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 
 - [`arrr`](https://github.com/DarkWiiPlayer/arrr) for commandline argument parsing
 - [`based`](https://github.com/DarkWiiPlayer/based) for base16/32/64 encoding and decoding
+- [`glass`](https://github.com/DarkWiiPlayer/glass) for config loading
 - [`lumber`](https://github.com/DarkWiiPlayer/lumber) for logging
 - [`scaffold`](https://github.com/DarkWiiPlayer/scaffold) for filesystem scaffolding
 - [`shapeshift`](https://github.com/DarkWiiPlayer/shapeshift) for data validations and transformations
