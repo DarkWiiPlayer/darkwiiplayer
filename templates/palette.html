@@ -143,14 +143,16 @@
 	}
 
 	div.colors button {
+		--radius: 50%;
 		all: unset;
 		margin: var(--separation2);
 		cursor: pointer;
-		border-radius: .4em;
+		border-radius: var(--radius);
 		overflow: hidden;
 		transition: box-shadow 0.3s;
 	} div.colors button::before {
 		content: '';
+		border-radius: var(--radius);
 		background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
 		box-shadow: .1em .1em .8em hsla(calc(var(--hue) + 30deg), calc(100% - var(--lightness) - 10%), calc(var(--lightness) - 40%), .4) inset;
 		width: 3em;
