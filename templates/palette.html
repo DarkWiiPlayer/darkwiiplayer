@@ -6,19 +6,19 @@
 </section>
 
 <!-- TODO: Change the base hue and offset here -->
-<section style="--base-hue: 200deg; --saturation: 80%; --offset: calc(360deg / 3)">
+<section style="--base-hue: 280deg; --saturation: 50%; --offset: calc(360deg / 6)">
 	<h2>Primary</h2>
 	<!-- Only override values here for slight tweaking -->
 	<div class="colors" style="--hue: var(--base-hue);">
-    <span style="--lightness: 05%"></span>
-    <span style="--lightness: 15%"></span>
-    <span style="--lightness: 30%"></span>
-    <span style="--lightness: 40%"></span>
-    <span style="--lightness: 50%"></span>
-    <span style="--lightness: 60%"></span>
-    <span style="--lightness: 70%"></span>
-    <span style="--lightness: 80%"></span>
-    <span style="--lightness: 95%"></span>
+		<button style="--lightness: 05%"></button>
+		<button style="--lightness: 15%"></button>
+		<button style="--lightness: 30%"></button>
+		<button style="--lightness: 40%"></button>
+		<button style="--lightness: 50%"></button>
+		<button style="--lightness: 60%"></button>
+		<button style="--lightness: 70%"></button>
+		<button style="--lightness: 80%"></button>
+		<button style="--lightness: 95%"></button>
 	</div>
 
 	<section class="hint box">
@@ -28,15 +28,15 @@
 
 	<h2>Secondary</h2>
 	<div class="colors" style="--hue: calc(var(--base-hue) + var(--offset));">
-    <span style="--lightness: 05%"></span>
-    <span style="--lightness: 15%"></span>
-    <span style="--lightness: 30%"></span>
-    <span style="--lightness: 40%"></span>
-    <span style="--lightness: 50%"></span>
-    <span style="--lightness: 60%"></span>
-    <span style="--lightness: 70%"></span>
-    <span style="--lightness: 80%"></span>
-    <span style="--lightness: 95%"></span>
+		<button style="--lightness: 05%"></button>
+		<button style="--lightness: 15%"></button>
+		<button style="--lightness: 30%"></button>
+		<button style="--lightness: 40%"></button>
+		<button style="--lightness: 50%"></button>
+		<button style="--lightness: 60%"></button>
+		<button style="--lightness: 70%"></button>
+		<button style="--lightness: 80%"></button>
+		<button style="--lightness: 95%"></button>
 	</div>
 
 	<section class="hint box">
@@ -47,15 +47,15 @@
 
 	<h2>Tertiary</h2>
 	<div class="colors" style="--hue: calc(var(--base-hue) - var(--offset));">
-    <span style="--lightness: 05%"></span>
-    <span style="--lightness: 15%"></span>
-    <span style="--lightness: 30%"></span>
-    <span style="--lightness: 40%"></span>
-    <span style="--lightness: 50%"></span>
-    <span style="--lightness: 60%"></span>
-    <span style="--lightness: 70%"></span>
-    <span style="--lightness: 80%"></span>
-    <span style="--lightness: 95%"></span>
+		<button style="--lightness: 05%"></button>
+		<button style="--lightness: 15%"></button>
+		<button style="--lightness: 30%"></button>
+		<button style="--lightness: 40%"></button>
+		<button style="--lightness: 50%"></button>
+		<button style="--lightness: 60%"></button>
+		<button style="--lightness: 70%"></button>
+		<button style="--lightness: 80%"></button>
+		<button style="--lightness: 95%"></button>
 	</div>
 
 	<section class="hint box">
@@ -64,16 +64,16 @@
 	</section>
 
 	<h2>Neutral</h2>
-	<div class="colors" style="--hue: var(--base-hue); --saturation: 5%;">
-    <span style="--lightness: 05%"></span>
-    <span style="--lightness: 15%"></span>
-    <span style="--lightness: 30%"></span>
-    <span style="--lightness: 40%"></span>
-    <span style="--lightness: 50%"></span>
-    <span style="--lightness: 60%"></span>
-    <span style="--lightness: 70%"></span>
-    <span style="--lightness: 80%"></span>
-    <span style="--lightness: 95%"></span>
+	<div class="colors" style="--hue: 210deg; --saturation: 5%;">
+		<button style="--lightness: 05%"></button>
+		<button style="--lightness: 15%"></button>
+		<button style="--lightness: 30%"></button>
+		<button style="--lightness: 40%"></button>
+		<button style="--lightness: 50%"></button>
+		<button style="--lightness: 60%"></button>
+		<button style="--lightness: 70%"></button>
+		<button style="--lightness: 80%"></button>
+		<button style="--lightness: 95%"></button>
 	</div>
 
 	<section class="hint box">
@@ -82,156 +82,171 @@
 	</section>
 </section>
 
-
-
-
 <!-- ======================================== -->
 <!-- ===== STYLES AND APPLICATION LOGIC ===== -->
 <!-- ======================================== -->
 
 <style>
-  :root {
-    font-size: 1em;
-    color: hsl(220deg, 8%, 20%);
-    font-family: "Open Sans", sans-serif;
-  }
+	:root {
+		font-size: 1em;
+		color: hsl(220deg, 8%, 20%);
+		font-family: "Open Sans", sans-serif;
+	}
 
-  * {
-    box-sizing: border-box;
-  }
+	* {
+		box-sizing: border-box;
+	}
 
-  code {
-	  font-family: "Hack", monospace;
-  }
+	code {
+		font-family: "Hack", monospace;
+	}
 
-  body {
-	  display: flex;
-	  flex-flow: column nowrap;
-	  align-items: center;
-    background: hsl(200deg, 5%, 95%);
-  }
-  /* The following only does font size shenanigans! */
+	body {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		background: hsl(200deg, 5%, 95%);
+	}
+	/* The following only does font size shenanigans! */
 
-  h1, h2 {
-	  text-align: center;
-	  font-weight: normal;
-	  font-family: "Raleway", "Quicksand", serif;
-  }
+	h1, h2 {
+		text-align: center;
+		font-weight: normal;
+		font-family: "Raleway", "Quicksand", serif;
+	}
 
-  h1 {
-	  font-size: 2.4em;
-	  --border: dotted .08em currentcolor;
-	  border-bottom: var(--border);
-	  border-top: var(---border);
-	  width: calc((3rem + .6rem * 2) * 9);
-	  text-align: center;
-	  padding: .2em 0;
-  }
-  h2 {
-	  font-size: 2em;
-  }
+	h1 {
+		font-size: 2.4em;
+		--border: dotted .08em currentcolor;
+		border-bottom: var(--border);
+		border-top: var(---border);
+		width: calc((3rem + .6rem * 2) * 9);
+		text-align: center;
+		padding: .2em 0;
+	}
+	h2 {
+		font-size: 2em;
+	}
 
-  .box {
-	  --radius: .3em;
-	  width: calc((3rem + .6rem * 2) * 9);
-	  font-style: italic;
-	  border-radius: var(--radius);
-	  background: hsla(200deg, 5%, 92%, 1);
-	  box-shadow: .0em .1em .2em inset hsl(220deg, 8%, 80%);
-	  padding: 1em 2em;
+	div.colors {
+		--separation2: .6em; /* Halved separation */
+		display: flex;
+		/* padding: var(--separation2); */
+	}
 
-	  position: relative;
-	  margin: 2em 0em;
-  }
+	div.colors button {
+		all: unset;
+		margin: var(--separation2);
+		cursor: pointer;
+		border-radius: .4em;
+		overflow: hidden;
+		transition: box-shadow 0.3s;
+	} div.colors button::before {
+		content: '';
+		background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
+		box-shadow: .1em .1em .8em hsla(calc(var(--hue) + 30deg), calc(100% - var(--lightness) - 10%), calc(var(--lightness) - 40%), .4) inset;
+		width: 3em;
+		height: 3em;
+		display: block;
+		transition: box-shadow 0.3s;
+	}
 
-  .hint, .info { --color: hsla(calc( 200deg -  calc(360deg / 3)), 80%, 50%, 1) }
+	div.colors button:hover {
+		box-shadow: .4em .4em .6em #0004;
+	}
+	div.colors button:hover::before {
+		box-shadow: none;
+	}
 
-  .box::after {
-	  display: block;
-	  position: absolute;
-	  left: 0;
-	  top: 0;
-	  height: 100%;
-	  width: .4em;
-	  background-color: var(--color, transparent);
-	  border-radius: var(--radius) 0 0 var(--radius);
-	  content: '';
-  }
+	/* === Popup notification shenanigans === */
 
-  .box.hint::before {
-    content: "Hint: ";
-    display: inline-block;
-    font-weight: bold;
-  }
+	@keyframes fade {
+		0%   { opacity: 0; transform: translate(-50%, -10%)}
+		20%  { opacity: 1;}
+		50%  { opacity: 1;}
+		100% { opacity: 0; transform: translate(-50%, -150%)}
+	}
 
+	div.notification {
+		top: 0em;
+		border: 1px solid currentcolor;
+		background: hsla(0deg, 0%, 100%, .8);
+		font-size: 1em;
+		opacity: 0;
+		position: fixed;
+		padding: .4em; 1em;
+		font-weight: bold;
+		text-align: center;
+	}
 
-  div.colors {
-	  --separation2: .6em; /* Halved separation */
-	  display: flex;
-	  /* padding: var(--separation2); */
-  }
+	/* === Info Boxes === */
 
-  div.colors span {
-	  background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
-	  border-radius: .4em;
-	  width: 3em;
-	  height: 3em;
-	  margin: var(--separation2);
-	  box-shadow: .1em .1em .8em hsla(calc(var(--hue) + 30deg), calc(100% - var(--lightness) - 10%), calc(var(--lightness) - 40%), .4) inset;
-  }
+	.box {
+		--radius: .3em;
+		width: calc((3rem + .6rem * 2) * 9);
+		font-style: italic;
+		border-radius: var(--radius);
+		background: hsla(200deg, 5%, 92%, 1);
+		box-shadow: .0em .1em .2em inset hsl(220deg, 8%, 80%);
+		padding: 1em 2em;
 
-  @keyframes fade {
-	  0%   { opacity: 0; transform: translate(-50%, -10%)}
-	  20%  { opacity: 1;}
-	  50%  { opacity: 1;}
-	  100% { opacity: 0; transform: translate(-50%, -150%)}
-  }
+		position: relative;
+		margin: 2em 0em;
+	}
 
-  div.notification {
-	  top: 0em;
-	  border: 1px solid currentcolor;
-	  background: hsla(0deg, 0%, 100%, .8);
-	  font-size: 1em;
-	  opacity: 0;
-	  position: fixed;
-	  padding: .4em; 1em;
-	  font-weight: bold;
-	  text-align: center;
-  }
+	.hint, .info { --color: hsla(calc( 280deg -  calc(360deg / 6)), 50%, 50%, 1) }
 
-  [center] { text-align: center; }
+	.box::after {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: .4em;
+		background-color: var(--color, transparent);
+		border-radius: var(--radius) 0 0 var(--radius);
+		content: '';
+	}
+
+	.box.hint::before {
+		content: "Hint: ";
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	/* === Utility === */
+
+	[center] { text-align: center; }
 </style>
 
 <script>
-	const show_message = function(message, color, x, y) {
-			let box = document.createElement('div');
-			box.innerHTML = message;
-			box.classList.add('notification');
+	const showMessage = function(message, color, x, y) {
+		let box = document.createElement('div');
+		box.innerHTML = message;
+		box.classList.add('notification');
 
-			if (x) box.style.left = x+"px";
-			if (y) box.style.top = y+"px";
+		if (x) box.style.left = x+"px";
+		if (y) box.style.top = y+"px";
 
-			document.querySelector("body").appendChild(box);
+		document.querySelector("body").appendChild(box);
 
-			box.style.setProperty('animation', 'fade 1s');
-			box.style.setProperty('animation-fill-mode', 'forwards');
-			box.style.setProperty('color', color);
+		box.style.setProperty('animation', 'fade 1s');
+		box.style.setProperty('animation-fill-mode', 'forwards');
+		box.style.setProperty('color', color);
 
-			box.addEventListener("animationend", ({box: target}) => box.parentElement.removeChild(box))
-		}
+		box.addEventListener("animationend", ({box: target}) => box.parentElement.removeChild(box))
+	}
 
 	window.addEventListener("load", function() {
-			document.querySelectorAll('div.colors span').forEach(function(span) {
-					span.addEventListener('click', function(event) {
-							let prop = name => getComputedStyle(event.target).getPropertyValue(name).replace(/^ *| *$/g, "")
-							let hsla = `hsla(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")}, 1)`
-							navigator.clipboard.writeText(hsla).then(function() {
-									show_message(`Copied to Clipboard:<br>${hsla}`, hsla, event.clientX, event.clientY);
-								}, function(err) {
-										console.error('Async: Could not copy text: ', err);
-									});
-						});
-					span.style.setProperty('cursor', 'pointer');
+		document.querySelectorAll('div.colors button').forEach(button => {
+			button.addEventListener('click', event => {
+				const prop = name => getComputedStyle(button).getPropertyValue(name).replace(/^ *| *$/g, "")
+				const hsla = `hsla(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")}, 1)`
+				navigator.clipboard.writeText(hsla).then(() => {
+					const box = button.getBoundingClientRect()
+					showMessage(`Copied to Clipboard:<br>${hsla}`, hsla, box.x+box.width/2, box.y+box.height/2);
 				});
-		})
+			});
+		});
+	})
 </script>
