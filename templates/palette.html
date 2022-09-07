@@ -1,5 +1,10 @@
 <h1>A colour palette in plain HTML</h1>
 
+<label>
+	<span>Background Colour:</span>
+	<input value="#f2f2f3" type="color" id="background-color"></input>
+</label>
+
 <section class="box">
 	A template colour palette written as a self-contained HTML file.
 	New palettes can be created easily by copying the file and changing a few CSS variables.
@@ -92,6 +97,9 @@
 		color: hsl(220deg, 8%, 20%);
 		font-family: "Open Sans", sans-serif;
 	}
+	body.dark {
+		color: hsl(220deg, 8%, 80%);
+	}
 
 	* {
 		box-sizing: border-box;
@@ -157,6 +165,9 @@
 	div.colors button:hover::before {
 		box-shadow: none;
 	}
+	body.dark div.colors button:hover {
+		box-shadow: .0em .0em .6em hsla(var(--hue), calc(var(--saturation) + 30%), 80%, 60%);
+	}
 
 	/* === Popup notification shenanigans === */
 
@@ -194,6 +205,11 @@
 		margin: 2em 0em;
 	}
 
+	body.dark .box {
+		background: hsla(200deg, 5%, 6%, 1);
+		box-shadow: .0em .1em .2em inset #0006;
+	}
+
 	.hint, .info { --color: hsla(calc( 280deg -  calc(360deg / 6)), 50%, 50%, 1) }
 
 	.box::after {
@@ -219,7 +235,7 @@
 	[center] { text-align: center; }
 </style>
 
-<script>
+<script type="module">
 	const showMessage = function(message, color, x, y) {
 		let box = document.createElement('div');
 		box.innerHTML = message;
@@ -237,16 +253,43 @@
 		box.addEventListener("animationend", ({box: target}) => box.parentElement.removeChild(box))
 	}
 
-	window.addEventListener("load", function() {
-		document.querySelectorAll('div.colors button').forEach(button => {
-			button.addEventListener('click', event => {
-				const prop = name => getComputedStyle(button).getPropertyValue(name).replace(/^ *| *$/g, "")
-				const hsla = `hsla(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")}, 1)`
-				navigator.clipboard.writeText(hsla).then(() => {
-					const box = button.getBoundingClientRect()
-					showMessage(`Copied to Clipboard:<br>${hsla}`, hsla, box.x+box.width/2, box.y+box.height/2);
-				});
+	document.querySelectorAll('div.colors button').forEach(button => {
+		button.addEventListener('click', event => {
+			const prop = name => getComputedStyle(button)
+				.getPropertyValue(name)
+				.replace(/^ *| *$/g, "")
+			const colour = `hsl(${prop("--hue")}, ${prop("--saturation")}, ${prop("--lightness")})`
+			navigator.clipboard.writeText(colour).then(() => {
+				const box = button.getBoundingClientRect()
+				showMessage(`Copied to Clipboard:<br>${colour}`, colour, box.x+box.width/2, box.y+box.height/2);
 			});
 		});
+	});
+
+	const register = (type, name, initial=undefined) => CSS.registerProperty({
+		name: `--${name}`,
+		syntax: `<${type}>`,
+		inherits: true,
+		initialValue: initial,
+	})
+
+	register("angle", "hue", "0deg")
+	register("percentage", "saturation", "100%")
+	register("percentage", "lightness", "50%")
+
+	const backgroundColourButton = document.getElementById("background-color")
+	backgroundColourButton.addEventListener("input", event => {
+		const rgb = backgroundColourButton.value
+		document.body.style.background = rgb
+		const channels = rgb
+			.match(/[0-9a-f][0-9a-f]/g)
+			.map(hex => parseInt(hex, 16))
+			.map(num => num / 255)
+		const luminosity = channels.reduce((a,b)=>a+b) / 3
+		if (luminosity < 0.4) {
+			document.body.classList.add("dark")
+		} else {
+			document.body.classList.remove("dark")
+		}
 	})
 </script>
