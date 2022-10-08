@@ -49,6 +49,7 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 - [`scaffold`](https://github.com/DarkWiiPlayer/scaffold) for filesystem scaffolding
 - [`shapeshift`](https://github.com/DarkWiiPlayer/shapeshift) for data validations and transformations
 - [`skooma`](https://github.com/DarkWiiPlayer/skooma) for HTML generation (also ported to JS)
+- [`spooder`](https://github.com/darkwiiplayer/spooder) for running simple tasks in Lua
 - [`streamcsv`](https://github.com/DarkWiiPlayer/streamcsv) for performant CSV reading
 
 
