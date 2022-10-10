@@ -14,7 +14,7 @@
 <section style="--base-hue: 280deg; --saturation: 50%; --offset: calc(360deg / 6)">
 	<h2>Primary</h2>
 	<!-- Only override values here for slight tweaking -->
-	<div class="colors" style="--hue: var(--base-hue);">
+	<colour-palette style="--hue: var(--base-hue);">
 		<button style="--lightness: 05%"></button>
 		<button style="--lightness: 15%"></button>
 		<button style="--lightness: 30%"></button>
@@ -24,7 +24,7 @@
 		<button style="--lightness: 70%"></button>
 		<button style="--lightness: 80%"></button>
 		<button style="--lightness: 95%"></button>
-	</div>
+	</colour-palette>
 
 	<section class="hint box">
 		Modify as needed by changing the <code>--hue</code> attribute in the inlined CSS.<br>
@@ -32,7 +32,7 @@
 	</section>
 
 	<h2>Secondary</h2>
-	<div class="colors" style="--hue: calc(var(--base-hue) + var(--offset));">
+	<colour-palette style="--hue: calc(var(--base-hue) + var(--offset));">
 		<button style="--lightness: 05%"></button>
 		<button style="--lightness: 15%"></button>
 		<button style="--lightness: 30%"></button>
@@ -42,7 +42,7 @@
 		<button style="--lightness: 70%"></button>
 		<button style="--lightness: 80%"></button>
 		<button style="--lightness: 95%"></button>
-	</div>
+	</colour-palette>
 
 	<section class="hint box">
 		You can copy any colour to the clipboard by just clicking on its box.
@@ -51,7 +51,7 @@
 	</section>
 
 	<h2>Tertiary</h2>
-	<div class="colors" style="--hue: calc(var(--base-hue) - var(--offset));">
+	<colour-palette style="--hue: calc(var(--base-hue) - var(--offset));">
 		<button style="--lightness: 05%"></button>
 		<button style="--lightness: 15%"></button>
 		<button style="--lightness: 30%"></button>
@@ -61,7 +61,7 @@
 		<button style="--lightness: 70%"></button>
 		<button style="--lightness: 80%"></button>
 		<button style="--lightness: 95%"></button>
-	</div>
+	</colour-palette>
 
 	<section class="hint box">
 		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
@@ -69,7 +69,7 @@
 	</section>
 
 	<h2>Neutral</h2>
-	<div class="colors" style="--hue: 210deg; --saturation: 5%;">
+	<colour-palette style="--hue: 210deg; --saturation: 5%;">
 		<button style="--lightness: 05%"></button>
 		<button style="--lightness: 15%"></button>
 		<button style="--lightness: 30%"></button>
@@ -79,13 +79,15 @@
 		<button style="--lightness: 70%"></button>
 		<button style="--lightness: 80%"></button>
 		<button style="--lightness: 95%"></button>
-	</div>
+	</colour-palette>
 
 	<section class="hint box">
 		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
 		This makes it easier and quicker to make adjustments.
 	</section>
 </section>
+
+<button id="export">Export as GIMP Palette</button>
 
 <!-- ======================================== -->
 <!-- ===== STYLES AND APPLICATION LOGIC ===== -->
@@ -136,21 +138,22 @@
 		font-size: 2em;
 	}
 
-	div.colors {
+	colour-palette {
 		--separation2: .6em; /* Halved separation */
 		display: flex;
 		/* padding: var(--separation2); */
 	}
 
-	div.colors button {
+	colour-palette button {
 		--radius: 50%;
 		all: unset;
 		margin: var(--separation2);
+		background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
 		cursor: pointer;
 		border-radius: var(--radius);
 		overflow: hidden;
 		transition: box-shadow 0.3s;
-	} div.colors button::before {
+	} colour-palette button::before {
 		content: '';
 		border-radius: var(--radius);
 		background: hsl(var(--hue), var(--saturation, 50%), var(--lightness, 50%));
@@ -161,13 +164,13 @@
 		transition: box-shadow 0.3s;
 	}
 
-	div.colors button:hover {
+	colour-palette  button:hover {
 		box-shadow: .4em .4em .6em #0004;
 	}
-	div.colors button:hover::before {
+	colour-palette  button:hover::before {
 		box-shadow: none;
 	}
-	body.dark div.colors button:hover {
+	body.dark colour-palette  button:hover {
 		box-shadow: .0em .0em .6em hsla(var(--hue), calc(var(--saturation) + 30%), 80%, 60%);
 	}
 
@@ -232,6 +235,18 @@
 		font-weight: bold;
 	}
 
+	#export {
+		all: unset;
+		font-size: 1.2em;
+		cursor: pointer;
+		padding: .4em 1.2em;
+		border-radius: 1.8em;
+		font-weight: bold;
+		background-color: hsl(340deg, 50%, 40%);
+		color: hsl(210deg, 5%, 95%);
+		margin: .4em;
+	}
+
 	/* === Utility === */
 
 	[center] { text-align: center; }
@@ -255,7 +270,7 @@
 		box.addEventListener("animationend", ({box: target}) => box.parentElement.removeChild(box))
 	}
 
-	document.querySelectorAll('div.colors button').forEach(button => {
+	document.querySelectorAll('colour-palette button').forEach(button => {
 		button.addEventListener('click', event => {
 			const prop = name => getComputedStyle(button)
 				.getPropertyValue(name)
@@ -293,5 +308,25 @@
 		} else {
 			document.body.classList.remove("dark")
 		}
+	})
+
+	customElements.define("colour-palette", class extends HTMLElement {
+		get colours() {
+			return Array.from(this.querySelectorAll("button"))
+				.map(button => getComputedStyle(button).backgroundColor)
+				.map(colour => colour.match(/\d+/g))
+				.map(match  => `${match[0]} ${match[1]} ${match[2]}`)
+		}
+	})
+
+	
+	const exportButton = document.querySelector("#export")
+	exportButton.addEventListener("click", event => {
+		const colours = Array.from(document.querySelectorAll("colour-palette")).map(palette => palette.colours)
+		const template = `GIMP Palette\nName: Palette\nColumns: 1\n#\n${colours.map(c => c.join("\n")).join("\n")}`
+		const link = document.createElement("a")
+		link.href = `data:text/plain;base64,${btoa(template)}`
+		link.download = "palette.gpl"
+		link.click()
 	})
 </script>
