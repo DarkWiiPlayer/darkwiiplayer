@@ -14,8 +14,7 @@
 <section style="--base-hue: 280deg; --saturation: 50%; --offset: calc(360deg / 6)">
 	<h2>Primary</h2>
 	<!-- Only override values here for slight tweaking -->
-	<colour-palette style="--hue: var(--base-hue);">
-	</colour-palette>
+	<colour-palette name="primary" style="--hue: var(--base-hue);"></colour-palette>
 
 	<section class="hint box">
 		Modify as needed by changing the <code>--hue</code> attribute in the inlined CSS.<br>
@@ -23,7 +22,7 @@
 	</section>
 
 	<h2>Secondary</h2>
-	<colour-palette style="--hue: calc(var(--base-hue) + var(--offset));"></colour-palette>
+	<colour-palette name="secondary" style="--hue: calc(var(--base-hue) + var(--offset));"></colour-palette>
 
 	<section class="hint box">
 		You can copy any colour to the clipboard by just clicking on its box.
@@ -32,7 +31,7 @@
 	</section>
 
 	<h2>Tertiary</h2>
-	<colour-palette style="--hue: calc(var(--base-hue) - var(--offset));"></colour-palette>
+	<colour-palette name="tertiary" style="--hue: calc(var(--base-hue) - var(--offset));"></colour-palette>
 
 	<section class="hint box">
 		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
@@ -40,7 +39,7 @@
 	</section>
 
 	<h2>Neutral</h2>
-	<colour-palette style="--hue: 210deg; --saturation: 5%;"></colour-palette>
+	<colour-palette name="neutral" style="--hue: 210deg; --saturation: 5%;"></colour-palette>
 
 	<section class="hint box">
 		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
@@ -261,7 +260,7 @@
 			return Array.from(this.querySelectorAll("button"))
 				.map(button => getComputedStyle(button).backgroundColor)
 				.map(colour => colour.match(/\d+/g))
-				.map(match  => `${match[0]} ${match[1]} ${match[2]}`)
+				.map((match, index)  => `${match[0]} ${match[1]} ${match[2]} ${this.name}-${index+1}`)
 		}
 
 		connectedCallback() {
@@ -289,13 +288,16 @@
 				});
 			});
 		}
+		get name() {
+			return this.getAttribute("name") || "Unnamed"
+		}
 	})
 
 	
 	const exportButton = document.querySelector("#export")
 	exportButton.addEventListener("click", event => {
 		const colours = Array.from(document.querySelectorAll("colour-palette")).map(palette => palette.colours)
-		const template = `GIMP Palette\nName: Palette\nColumns: 1\n#\n${colours.map(c => c.join("\n")).join("\n")}`
+		const template = `GIMP Palette\nName: Palette\nColumns: ${colours.length}\n#\n${colours.map(c => c.join("\n")).join("\n#\n")}`
 		const link = document.createElement("a")
 		link.href = `data:text/plain;base64,${btoa(template)}`
 		link.download = "palette.gpl"
