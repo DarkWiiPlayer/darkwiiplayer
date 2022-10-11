@@ -1,14 +1,13 @@
-<h1>A colour palette in plain HTML</h1>
+<h1>Talia: A colour Palette</h1>
+
+<section class="important info box">
+	A general-purpose colour palette to use for whatever.
+</section>
 
 <label>
 	<span>Background Colour:</span>
 	<input value="#f2f2f3" type="color" id="background-color"></input>
 </label>
-
-<section class="box">
-	A template colour palette written as a self-contained HTML file.
-	New palettes can be created easily by copying the file and changing a few CSS variables.
-</section>
 
 <!-- TODO: Change the base hue and offset here -->
 <section style="--base-hue: 280deg; --saturation: 40%; --offset: calc(360deg / 6)">
@@ -163,6 +162,7 @@
 	}
 
 	.hint, .info { --color: hsl(220deg, 40%, 50%) }
+	.important { --color: hsl(280deg, 30%, 50%) }
 
 	.box::after {
 		display: block;
