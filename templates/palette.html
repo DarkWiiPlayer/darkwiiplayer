@@ -11,39 +11,33 @@
 </section>
 
 <!-- TODO: Change the base hue and offset here -->
-<section style="--base-hue: 280deg; --saturation: 50%; --offset: calc(360deg / 6)">
+<section style="--base-hue: 280deg; --saturation: 40%; --offset: calc(360deg / 6)">
 	<h2>Primary</h2>
-	<!-- Only override values here for slight tweaking -->
-	<colour-palette name="primary" style="--hue: var(--base-hue);"></colour-palette>
+	<colour-palette name="primary" style="--hue: calc(var(--base-hue) - var(--offset));"></colour-palette>
 
-	<section class="hint box">
-		Modify as needed by changing the <code>--hue</code> attribute in the inlined CSS.<br>
-		Usage of a separate color picker tool for this step might be preferable.<br>
+	<section class="info box">
+		The main colour of the scheme. Should be used for the majority of the content.
 	</section>
 
 	<h2>Secondary</h2>
-	<colour-palette name="secondary" style="--hue: calc(var(--base-hue) + var(--offset));"></colour-palette>
+	<colour-palette name="secondary" style="--hue: var(--base-hue); --saturation: 30%;"></colour-palette>
 
-	<section class="hint box">
-		You can copy any colour to the clipboard by just clicking on its box.
-		By default colours are copied as HSLA values.
-		This can be changed in the script block at the bottom of the document.
+	<section class="info box">
+		A secondary colour to provide some contrast to the primary colour without drawing too much attention.
 	</section>
 
-	<h2>Tertiary</h2>
-	<colour-palette name="tertiary" style="--hue: calc(var(--base-hue) - var(--offset));"></colour-palette>
+	<h2>Contrast</h2>
+	<colour-palette name="contrast" style="--hue: calc(var(--base-hue) + var(--offset)); --saturation: 50%;"></colour-palette>
 
-	<section class="hint box">
-		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
-		This makes it easier and quicker to make adjustments.
+	<section class="info box">
+		This colour is intended to provide a lot more contrast to the primary colour for elements that require user attention.
 	</section>
 
 	<h2>Neutral</h2>
 	<colour-palette name="neutral" style="--hue: 210deg; --saturation: 5%;"></colour-palette>
 
-	<section class="hint box">
-		By making use of <code>calc</code> and <code>var</code>, most of the colour palette can be automated.
-		This makes it easier and quicker to make adjustments.
+	<section class="info box">
+		Just a more neutral scale of gray tones 
 	</section>
 </section>
 
@@ -168,7 +162,7 @@
 		box-shadow: .0em .1em .2em inset #0006;
 	}
 
-	.hint, .info { --color: hsla(calc( 280deg -  calc(360deg / 6)), 50%, 50%, 1) }
+	.hint, .info { --color: hsl(220deg, 40%, 50%) }
 
 	.box::after {
 		display: block;
@@ -196,7 +190,7 @@
 		border-radius: 1.8em;
 		font-weight: bold;
 		background-color: hsl(340deg, 50%, 40%);
-		color: hsl(210deg, 5%, 95%);
+		color: hsl(340deg, 50%, 95%);
 		margin: .4em;
 	}
 
