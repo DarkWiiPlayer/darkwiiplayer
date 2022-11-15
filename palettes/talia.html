@@ -42,7 +42,8 @@
 	</section>
 </section>
 
-<button id="export">Export as GIMP Palette</button>
+<button id="export-gimp">Export as GIMP Palette</button>
+<button id="export-css">Export as CSS Variables</button>
 
 <!-- ======================================== -->
 <!-- ===== STYLES AND APPLICATION LOGIC ===== -->
@@ -184,7 +185,7 @@
 		font-weight: bold;
 	}
 
-	#export {
+	button {
 		all: unset;
 		font-size: 1.2em;
 		cursor: pointer;
@@ -256,7 +257,7 @@
 			return Array.from(this.querySelectorAll("button"))
 				.map(button => getComputedStyle(button).backgroundColor)
 				.map(colour => colour.match(/\d+/g))
-				.map((match, index)  => `${match[0]} ${match[1]} ${match[2]} ${this.name}-${index+1}`)
+				.map((match, index) => [match[0], match[1], match[2], `${this.name}-${index+1}`])
 		}
 
 		connectedCallback() {
@@ -290,13 +291,27 @@
 	})
 
 	
-	const exportButton = document.querySelector("#export")
-	exportButton.addEventListener("click", event => {
+	const exportGimpButton = document.querySelector("#export-gimp")
+	exportGimpButton.addEventListener("click", event => {
 		const colours = Array.from(document.querySelectorAll("colour-palette")).map(palette => palette.colours)
-		const template = `GIMP Palette\nName: Palette\nColumns: ${colours.length}\n#\n${colours.map(c => c.join("\n")).join("\n#\n")}`
+		const template = `GIMP Palette\nName: Palette\nColumns: ${colours.length}\n#\n${colours.map(c => c.map(c=>c.join(' ')).join("\n")).join("\n#\n")}`
 		const link = document.createElement("a")
 		link.href = `data:text/plain;base64,${btoa(template)}`
 		link.download = "palette.gpl"
+		link.click()
+	})
+
+	const hexByte = byte => byte <= 16 ? `0${byte.toString(16)}` : byte.toString(16)
+
+	const exportCSSButton = document.querySelector("#export-css")
+	exportCSSButton.addEventListener("click", event => {
+		const colours = Array.from(document.querySelectorAll("colour-palette"))
+			.map(palette => palette.colours.map(colour => `--${colour[3]}: #${colour.slice(0,3).map(Number).map(hexByte).join('')};`))
+		const template = `/*Talia Palette*/\n:root {\n${colours.map(p => p.map(c => "\t" + c).join("\n")).join("\n\n")}\n}`
+		console.log(template)
+		const link = document.createElement("a")
+		link.href = `data:text/plain;base64,${btoa(template)}`
+		link.download = "palette.css"
 		link.click()
 	})
 </script>
