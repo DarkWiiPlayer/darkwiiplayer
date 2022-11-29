@@ -1,4 +1,4 @@
-<title>Talia: A colour palette</title>
+<title>Talia</title>
 
 <h1>Talia: A colour palette</h1>
 
@@ -294,10 +294,10 @@
 	const exportGimpButton = document.querySelector("#export-gimp")
 	exportGimpButton.addEventListener("click", event => {
 		const colours = Array.from(document.querySelectorAll("colour-palette")).map(palette => palette.colours)
-		const template = `GIMP Palette\nName: Palette\nColumns: ${colours.length}\n#\n${colours.map(c => c.map(c=>c.join(' ')).join("\n")).join("\n#\n")}`
+		const template = `GIMP Palette\nName: ${document.title}\nColumns: 9\n#\n${colours.map(c => c.map(c=>c.join(' ')).join("\n")).join("\n#\n")}`
 		const link = document.createElement("a")
 		link.href = `data:text/plain;base64,${btoa(template)}`
-		link.download = "palette.gpl"
+		link.download = `${document.title.toLowerCase()}.gpl`
 		link.click()
 	})
 
