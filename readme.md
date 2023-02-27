@@ -35,10 +35,15 @@ Lua library for the server-side of your web projects.
 The current project structure is a bit of a clusterfuck but it is slowly being
 refactored into something decent.
 
-### [DarkWiiPlayer/JS](https://github.com/darkwiiplayer/js)
+### [DarkWiiPlayer/JS](https://darkwiiplayer.github.io/js/)
 
 A repository of JavaScript snippets slowly turned into a front-end
-micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
+micro-framework over time.
+
+### [DarkWiiPlayer/CSS](https://darkwiiplayer.github.io/css)
+
+A lightweight CSS framework & component library that aims to provide a good
+balance between versatility, usability and size.
 
 ### Just a bunch of smaller Lua libraries
 
@@ -51,7 +56,6 @@ micro-framework over time. [Documentation](https://darkwiiplayer.github.io/js/)
 - [`skooma`](https://github.com/DarkWiiPlayer/skooma) for HTML generation (also ported to JS)
 - [`spooder`](https://github.com/darkwiiplayer/spooder) for running simple tasks in Lua
 - [`streamcsv`](https://github.com/DarkWiiPlayer/streamcsv) for performant CSV reading
-
 
 ## Find me on:
 
