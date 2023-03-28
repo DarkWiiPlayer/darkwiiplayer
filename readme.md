@@ -60,7 +60,7 @@ balance between versatility, usability and size.
 ## Find me on:
 
 - The [Lua Scripters](https://discord.gg/7wu7ZsW) discord server
-- [Fosstodon](https://fosstodon.org/@darkwiiplayer)
+- [Mastodon](https://tech.lgbt/@darkwiiplayer)
 - [Twitter](https://twitter.com/DarkWiiPlayer)
 - [Dev.to](https://dev.to/darkwiiplayer)
 
