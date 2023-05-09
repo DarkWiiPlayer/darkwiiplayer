@@ -1,3 +1,6 @@
+---
+tags: terminal multimedia
+---
 # ffmpeg
 ## Linux Commandline tool for Video Editing
 Basic commandline: `ffmpeg -i input.mp4 output.mp4`

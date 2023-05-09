@@ -14,5 +14,5 @@ pdfimages -png input.pdf prefix
 To convert the actual document to images (so kinda like taking screenshots, but better)
 
 ```sh
-pdf2ppm -png input.pdf output.png
+pdftoppm -png input.pdf output -r 300
 ```

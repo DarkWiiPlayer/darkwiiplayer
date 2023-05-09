@@ -1,3 +1,6 @@
+---
+tags: terminal image multimedia
+---
 # Vips
 Commandline interface to [[libvips]]
 

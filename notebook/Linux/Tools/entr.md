@@ -1,5 +1,5 @@
 ---
-tags: automation
+tags: automation terminal
 ---
 # entr
 Runs a command when files change:

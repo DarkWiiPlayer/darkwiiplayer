@@ -1,3 +1,6 @@
+---
+tags: terminal security encryption
+---
 ## Creating a key
 
 To get all the options, run:
